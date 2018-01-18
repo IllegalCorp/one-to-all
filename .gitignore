@@ -1,0 +1,8 @@
+#Ignore idea configuration files
+*.iml
+
+#Ignore temporary documents files
+*~
+
+#Ignore .idea files
+.idea/
