@@ -10,8 +10,12 @@ public class ConnectionDao {
 
   public static final String CORE_DB_NAME = "corestorage";
 
+  final CloudantAccess cloudantAccess;
+
   @Autowired
-  CloudantAccess cloudantAccess;
+  public ConnectionDao(CloudantAccess cloudantAccess) {
+    this.cloudantAccess = cloudantAccess;
+  }
 
   public Database getDatabase() {
     return cloudantAccess.getClient().database(CORE_DB_NAME, false);

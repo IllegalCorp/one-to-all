@@ -1,4 +1,4 @@
-package com.app.spring;
+package com.app.spring.configs;
 
 import com.app.cloudant.CloudantAccess;
 import org.springframework.context.annotation.Bean;

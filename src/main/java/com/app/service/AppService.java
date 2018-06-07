@@ -10,11 +10,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class AppService {
 
-  @Autowired
-  private UserDao userDao;
+  private final UserDao userDao;
+
+  private final ConnectionDao connectionDao;
 
   @Autowired
-  private ConnectionDao connectionDao;
+  public AppService(UserDao userDao, ConnectionDao connectionDao) {
+    this.userDao = userDao;
+    this.connectionDao = connectionDao;
+  }
 
   public User getUser(String id) {
     return userDao.getUser(id);

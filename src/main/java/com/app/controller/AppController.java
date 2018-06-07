@@ -13,8 +13,12 @@ import java.util.List;
 @Controller
 public class AppController {
 
+    private final AppService appService;
+
     @Autowired
-    private AppService appService;
+    public AppController(AppService appService) {
+        this.appService = appService;
+    }
 
     @RequestMapping("/{id}")
     public @ResponseBody

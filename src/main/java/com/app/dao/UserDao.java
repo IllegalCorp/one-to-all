@@ -8,11 +8,15 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserDao {
 
-  @Autowired
-  ConnectionDao connectionDao;
+  final ConnectionDao connectionDao;
 
   private User user;
   private List<User> users;
+
+  @Autowired
+  public UserDao(ConnectionDao connectionDao) {
+    this.connectionDao = connectionDao;
+  }
 
   public User getUser(String id) {
     return connectionDao.getDatabase().find(User.class, id);
