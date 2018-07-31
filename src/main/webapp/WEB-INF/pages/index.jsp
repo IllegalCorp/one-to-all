@@ -6,6 +6,6 @@
     </title>
 </head>
 <body>
-Hello from spring!!!
+Lets do this
 </body>
 </html>
