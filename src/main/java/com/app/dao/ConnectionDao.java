@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ConnectionDao {
 
-  public static final String CORE_DB_NAME = "corestorage";
+  public static final String CORE_DB_NAME = "main-storage";
 
   final CloudantAccess cloudantAccess;
 
